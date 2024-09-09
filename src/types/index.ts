@@ -1,10 +1,8 @@
 export type Book = {
-_id:string;
+id:string;
 title:string;
-description:string;
-coverImage:string;
-file:string;
-author:Author
+subtitle:string;
+authors:string;
+image:string;
+url:string
 }
-
-export type Author = {name:string}
