@@ -1,17 +1,13 @@
-import Image from "next/image";
-import Banner from "./components/Banner";
-import ProductList from "./components/ProductList"
-import { Suspense } from "react";
-import Loading from "@/components/Loading";
+import { Button } from "@/components/ui/button";
+import SearchBar from "../components/SearchBar";
+import Categories from "../components/Categories";
 export default async function Home() {
 
 
   return (
     <>
-      <Banner />
-      <Suspense fallback={<Loading/>}>
-      <ProductList />
-      </Suspense>
+<SearchBar/>
+<Categories/>
     </>
   );
 }
