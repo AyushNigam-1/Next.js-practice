@@ -3,6 +3,7 @@ import Image from 'next/image';
 import { useParams } from 'next/navigation';
 import { Card, CardContent, CardHeader } from '@/components/ui/card';
 import { Button } from '@/components/ui/button'
+import { Checkbox } from '@/components/ui/checkbox';
 const page = () => {
     const params = useParams();
     const product1 = params.product;
@@ -39,7 +40,12 @@ const page = () => {
                 </h3>
                 <div className='flex gap-3'>
                     {
-                        ['Large', 'Medium', 'Small'].map(size => <Button> {size}  </Button>)
+                        ['Large', 'Medium', 'Small'].map(size => {
+                            return <span className='bg-primary flex rounded-md items-center p-2 gap-2'>
+                                <Checkbox className='size-7  rounded-full bg-[#0a0a0a]' />
+                                <Button className='text-2xl bg-transparent hover:bg-transparent m-0 p-0'>{size}  </Button>
+                            </span>
+                        })
                     }
                 </div>
                 <h3 className='text-xl font-semibold' >
@@ -48,13 +54,13 @@ const page = () => {
                 <div className='flex gap-3'>
                     {
                         [{ name: "123 Market Street, City Center" }, { name: "404 Veggie Street, Greenfield" }].map(shop => <Card className="p-3 bg-gray-800 border-none text-white">
-                            <div className='flex'>
-                                {/* <div>
-
-                                </div> */}
+                            <div className='flex gap-3'>
+                                <div className='pt-1'>
+                                    <Checkbox className='size-7  rounded-full bg-[#0a0a0a]' />
+                                </div>
                                 <div>
-                                    <h3 className='text' >{shop.name}</h3>
-                                    <h5> Price : $4.99 | Estimated Time : 45min </h5>
+                                    <h3 className='text-2xl' >{shop.name}</h3>
+                                    <h5 className='text-xl' > Price : $4.99 | Estimated Time : 45min </h5>
                                 </div>
                             </div>
                         </Card>)

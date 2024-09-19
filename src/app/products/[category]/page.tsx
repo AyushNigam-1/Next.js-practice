@@ -3,6 +3,7 @@ import { useParams } from 'next/navigation';
 import React from 'react';
 import Link from 'next/link';
 import { Card, CardContent, CardHeader } from '@/components/ui/card';
+import { Button } from '@/components/ui/button';
 import Image from 'next/image';
 const Page = () => {
     const params = useParams();
