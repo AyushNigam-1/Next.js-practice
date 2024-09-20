@@ -97,7 +97,7 @@ const Page = () => {
                 {
                     groceryProducts.map((item) => (
                         <Link href={`/products/${category}/${item.name}`} key={item.name}>
-                            <Card className="w-[350px] bg-gray-800 border-none" >
+                            <Card className="w-[350px] bg-primary border-none" >
                                 <CardHeader>
                                     <Image src="https://img.icons8.com/bubbles/300/ingredients.png" alt="Logo" width={300} height={300} />
                                 </CardHeader>

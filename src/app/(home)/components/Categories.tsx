@@ -2,12 +2,8 @@ import React from 'react'
 import {
   Card,
   CardContent,
-  CardDescription,
-  CardFooter,
   CardHeader,
-  CardTitle,
 } from "@/components/ui/card"
-import { Button } from '@/components/ui/button'
 import Image from 'next/image'
 import Link from 'next/link'
 const Categories = () => {
@@ -18,7 +14,7 @@ const Categories = () => {
         {
           Array(8).fill(0).map((item) => (
             <Link href={`/products/${item}`}>
-              <Card className="w-[350px] bg-gray-800 border-none" key={item}>
+              <Card className="w-[350px] bg-primary border-none" key={item}>
                 <CardHeader>
                   <Image src="https://img.icons8.com/bubbles/300/ingredients.png" alt="Logo" width={300} height={300} />
                 </CardHeader>
