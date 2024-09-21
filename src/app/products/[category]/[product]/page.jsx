@@ -40,12 +40,12 @@ const page = () => {
                 </h3>
                 <div className='flex gap-3'>
                     {
-                        ['Large', 'Medium', 'Small'].map(size => {
-                            return <span className='bg-primary flex rounded-md items-center py-1 px-4 gap-2'>
-                                <Button className='text-xl bg-transparent hover:bg-transparent m-0 p-0 text-gray-300'> <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="size-5">
+                        [{ name: 'Large', isActive: true }, { name: 'Medium', isActive: false }, { name: 'Small', isActive: false }].map(size => {
+                            return <span key={size.name} className={`${size.isActive ? 'bg-green-900 border-2 border-green-300' : 'bg-primary'} flex rounded-md items-center py-1 px-4 gap-2  shadow-slate-100 `}>
+                                <Button className='text-xl bg-transparent hover:bg-transparent m-0 p-0  text-gray-300 '> <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="size-5">
                                     <path strokeLinecap="round" strokeLinejoin="round" d="M3.75 3.75v4.5m0-4.5h4.5m-4.5 0L9 9M3.75 20.25v-4.5m0 4.5h4.5m-4.5 0L9 15M20.25 3.75h-4.5m4.5 0v4.5m0-4.5L15 9m5.25 11.25h-4.5m4.5 0v-4.5m0 4.5L15 15" />
                                 </svg>
-                                    &nbsp;    {size} </Button>
+                                    &nbsp;    {size.name} </Button>
                             </span>
                         })
                     }
@@ -55,7 +55,7 @@ const page = () => {
                 </h3>
                 <div className='flex gap-3'>
                     {
-                        [{ name: "123 Market Street, City Center" }, { name: "404 Veggie Street, Greenfield" }].map(shop => <Card className="p-3 bg-primary border-none text-white">
+                        [{ name: "123 Market Street, City Center", isSelected: true }, { name: "404 Veggie Street, Greenfield", isSelected: false }].map(shop => <Card className={`p-3 bg-primary text-white ${shop.isSelected ? 'bg-green-900 border-2 border-green-300' : 'bg-primary border-none'}`}>
                             <div className='flex gap-3'>
 
                                 <div>
@@ -70,7 +70,7 @@ const page = () => {
                     }
                 </div>
                 <div className='flex gap-3 align-bottom'>
-                    <Button className="text-xl bg-primary p-6 text-gray-300">
+                    <Button className="  text-xl bg-primary p-6 text-gray-300 ">
                         <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="size-6">
                             <path strokeLinecap="round" strokeLinejoin="round" d="M21 8.25c0-2.485-2.099-4.5-4.688-4.5-1.935 0-3.597 1.126-4.312 2.733-.715-1.607-2.377-2.733-4.313-2.733C5.1 3.75 3 5.765 3 8.25c0 7.22 9 12 9 12s9-4.78 9-12Z" />
                         </svg> &nbsp;

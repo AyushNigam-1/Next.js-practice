@@ -102,30 +102,34 @@ const Page = () => {
                                     <Image src="https://img.icons8.com/bubbles/300/ingredients.png" alt="Logo" width={300} height={300} />
                                 </CardHeader>
                                 <CardContent >
-                                    <div className='flex items-center gap-2 justify-between'>
-                                        <h4 className='text-2xl font-semibold text-center text-white'>
-                                            {item.name}
-                                        </h4>
-                                        <h4 className='text-2xl font-semibold text-center text-white' > ${item.price}</h4>
-                                    </div>
-                                    <div className='flex items-center my-2 justify-between' >
-                                        <div>
-                                            {item.available ? <div className='flex items-center gap-1 justify-center text-green-400'>
-                                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="size-5 ">
-                                                    <path strokeLinecap="round" strokeLinejoin="round" d="M9 12.75 11.25 15 15 9.75M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z" />
-                                                </svg> <p>
-                                                    Available
-                                                </p>
-                                            </div> : <div className='flex items-center gap-1 justify-center text-red-400'>
-                                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="size-5 ">
-                                                    <path strokeLinecap="round" strokeLinejoin="round" d="M6 18 18 6M6 6l12 12" />
-                                                </svg>
-                                                <p>
-                                                    Not Available
-                                                </p>
+                                    <div className='flex gap-2 justify-between items-center'>
+                                        <div className='flex flex-col gap-2'>
+                                            <h4 className='text-2xl font-semibold  text-white text-left'>
+                                                {item.name}
+                                            </h4>
+                                            <div>
+                                                {item.available ? <div className='flex gap-1 text-sm bg-green-800 py-0.5 px-2 rounded-full justify-center text-green-100 shadow-md'>
+                                                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="size-5 ">
+                                                        <path strokeLinecap="round" strokeLinejoin="round" d="M9 12.75 11.25 15 15 9.75M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z" />
+                                                    </svg> <p>
+                                                        Available
+                                                    </p>
+                                                </div> : <div className='flex items-center gap-1 justify-center text-sm  text-red-100 bg-red-800 py-0.5 px-2 rounded-full shadow-md'>
+                                                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="size-4 ">
+                                                        <path strokeLinecap="round" strokeLinejoin="round" d="M6 18 18 6M6 6l12 12" />
+                                                    </svg>
+                                                    <p>
+                                                        Not Available
+                                                    </p>
+                                                </div>
+                                                }
                                             </div>
-                                            }
                                         </div>
+
+                                        <h4 className='text-4xl font-semibold text-center text-gray-200' > $ {item.price}</h4>
+                                    </div>
+                                    {/* <div className='flex items-center my-2 justify-between' >
+
                                         <div className='flex gap-1 items-center'>
                                             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="size-5 text-white">
                                                 <path strokeLinecap="round" strokeLinejoin="round" d="M12 6v6h4.5m4.5 0a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z" />
@@ -133,7 +137,7 @@ const Page = () => {
                                             <p className='text-gray-200' >
                                                 {item.estimatedDeliveryTime}</p>
                                         </div>
-                                    </div>
+                                    </div> */}
                                 </CardContent>
                             </Card>
                         </Link>
