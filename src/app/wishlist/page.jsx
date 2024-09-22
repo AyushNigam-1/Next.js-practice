@@ -13,7 +13,6 @@ const page = () => {
     return (
         <div>
             <h2 className='text-3xl font-bold text-center mb-4' >Wishlist</h2>
-
             <Link href={`/products`} key={item.name}>
                 <Card className="w-[350px] bg-primary border-none" >
                     <CardHeader>
