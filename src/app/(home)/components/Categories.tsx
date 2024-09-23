@@ -19,7 +19,7 @@ const Categories = () => {
                   <Image src="https://img.icons8.com/bubbles/300/ingredients.png" alt="Logo" width={300} height={300} />
                 </CardHeader>
                 <CardContent >
-                  <h4 className='text-2xl font-semibold text-center text-white'>
+                  <h4 className='text-2xl font-semibold text-center text-white mb-2'>
                     Groceries
                   </h4>
                   <div className='flex items-center gap-2 justify-center bg-green-900/55 text-green-100 rounded-full p-1' >
