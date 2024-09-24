@@ -3,7 +3,6 @@ import { useParams } from 'next/navigation';
 import React from 'react';
 import Link from 'next/link';
 import { Card, CardContent, CardHeader } from '@/components/ui/card';
-import { Button } from '@/components/ui/button';
 import Image from 'next/image';
 const Page = () => {
     const params = useParams();
@@ -92,7 +91,7 @@ const Page = () => {
     ];
     return (
         <div className='container mx-auto flex flex-col gap-7 text-center'>
-            <h2 className='text-3xl font-bold' >Choose Product</h2>
+            <h2 className='text-3xl font-bold ' >Choose Product</h2>
             <div className='grid grid-cols-4 gap-8 '>
                 {
                     groceryProducts.map((item) => (
