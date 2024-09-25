@@ -36,6 +36,19 @@ const page = () => {
                     ${product.price}
                 </h3>
                 <h3 className='text-xl text-gray-200' >
+                    Quantity
+                </h3>
+                <div className='text-3xl flex gap-2 font-semibold text-gray-300' >
+                    {
+                        [{ name: '2', isActive: true }, { name: '3', isActive: false }, { name: '4', isActive: false }].map(size => {
+                            return <span key={size.name} className={`${size.isActive ? 'bg-green-900 border-2 border-green-300' : 'bg-primary'} flex rounded-md items-center py-1 px-4 gap-2  shadow-slate-100 `}>
+                                <Button className='text-xl bg-transparent hover:bg-transparent m-0 p-0  text-gray-300 '>
+                                    {size.name} </Button>
+                            </span>
+                        })
+                    }
+                </div>
+                <h3 className='text-xl text-gray-200' >
                     Size
                 </h3>
                 <div className='flex gap-3'>
