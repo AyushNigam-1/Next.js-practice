@@ -102,12 +102,11 @@ const Page = () => {
                                 </CardHeader>
                                 <CardContent className='flex flex-col gap-2' >
                                     <div className='flex justify-between' >
-                                        <div className='flex gap-3 items-center' >
-                                            <h4 className='text-2xl font-semibold text-center text-white'>
-                                                {item.name}
-                                            </h4>
-                                            <p className='text-gray-400 text-lg' > x 1 </p>
-                                        </div>
+
+                                        <h4 className='text-2xl font-semibold text-center text-white'>
+                                            {item.name}
+                                        </h4>
+
                                         <div>
                                             {item.available ? <div className='flex gap-1 text-sm bg-green-800 py-0.5 px-2 rounded-full justify-center text-green-100 shadow-md'>
                                                 <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="size-5 ">
@@ -124,7 +123,10 @@ const Page = () => {
                                         </div>
                                     </div>
                                     <div className='flex gap-2 justify-between items-center'>
-                                        <h4 className='text-4xl font-semibold text-center text-gray-200' > $ {item.price}</h4>
+                                        <div className='flex gap-3 items-center' >
+                                            <h4 className='text-4xl font-semibold text-center text-gray-200' > $ {item.price}</h4>
+                                            <p className='text-gray-400 text-lg' > x 1 </p>
+                                        </div>
                                         <div className='flex gap-3' >
                                             <button className='text-green-100 bg-green-800 p-2 rounded-full'>
                                                 <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="size-6">
