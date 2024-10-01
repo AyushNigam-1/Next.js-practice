@@ -8,7 +8,7 @@ const ShopList = () => {
             </h1>
             <div className='flex gap-3'>
                 {
-                    [{ name: "123 Market Street, City Center", isSelected: true }, { name: "404 Veggie Street, Greenfield", isSelected: false }].map(shop => <Card className={`p-3 bg-primary text-white ${shop.isSelected ? 'bg-green-900 border-2 border-green-300' : 'bg-primary border-none'}`}>
+                    [{ name: "123 Market Street, City Center", isSelected: true }, { name: "404 Veggie Street, Greenfield", isSelected: false }, { name: "404 Veggie Street, Greenfield", isSelected: false }].map(shop => <Card className={`p-3 bg-primary text-white ${shop.isSelected ? 'bg-green-900 border-2 border-green-300' : 'bg-primary border-none'}`}>
                         <div className='flex gap-3'>
 
                             <div>

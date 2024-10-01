@@ -15,7 +15,7 @@ const Item = () => {
         phoneNumber: "+1-234-567-8901",
     }
     return (
-        <div className='flex gap-6 justify-center'>
+        <div className='flex gap-6'>
             <Card className="bg-primary border-none">
                 <Image src="https://img.icons8.com/bubbles/300/ingredients.png" alt="Logo" width={600} height={600} />
             </Card>
@@ -56,7 +56,9 @@ const Item = () => {
                                 <Button className='text-xl bg-transparent hover:bg-transparent m-0 p-0  text-gray-300 '> <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="size-5">
                                     <path strokeLinecap="round" strokeLinejoin="round" d="M3.75 3.75v4.5m0-4.5h4.5m-4.5 0L9 9M3.75 20.25v-4.5m0 4.5h4.5m-4.5 0L9 15M20.25 3.75h-4.5m4.5 0v4.5m0-4.5L15 9m5.25 11.25h-4.5m4.5 0v-4.5m0 4.5L15 15" />
                                 </svg>
-                                    &nbsp;    {size.name} </Button>
+                                    &nbsp;
+                                    {size.name}
+                                </Button>
                             </span>
                         })
                     }
@@ -66,7 +68,7 @@ const Item = () => {
                 </h3>
                 <div className='flex gap-3'>
                     {
-                        [{ name: "123 Market Street, City Center", isSelected: true }, { name: "404 Veggie Street, Greenfield", isSelected: false }].map(shop => <Card className={`p-3 bg-primary text-white ${shop.isSelected ? 'bg-green-900 border-2 border-green-300' : 'bg-primary border-none'}`}>
+                        [{ name: "404 Veggie Street, Greenfield", isSelected: true }].map(shop => <Card className={`p-3 bg-primary text-white ${shop.isSelected ? 'bg-green-900 border-2 border-green-300' : 'bg-primary border-none'}`}>
                             <div className='flex gap-3'>
 
                                 <div>
