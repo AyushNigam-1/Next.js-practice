@@ -9,12 +9,12 @@ const page = () => {
     const params = useParams();
     const product1 = params.product;
     return (
-        <div className='flex flex-col gap-8'>
-            <div className='flex justify-center gap-6' >
-                <Item />
-                <ShopDetails />
-            </div>
+        <div className='flex flex-col gap-8 items-center'>
+            {/* <div className='flex justify-around ' > */}
+            <Item />
+            {/* </div> */}
             <ShopList />
+            <ShopDetails />
         </div>
     )
 }

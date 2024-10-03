@@ -10,7 +10,6 @@ const ShopList = () => {
                 {
                     [{ name: "123 Market Street, City Center", isSelected: true }, { name: "404 Veggie Street, Greenfield", isSelected: false }, { name: "404 Veggie Street, Greenfield", isSelected: false }].map(shop => <Card className={`p-3 bg-primary text-white ${shop.isSelected ? 'bg-green-900 border-2 border-green-300' : 'bg-primary border-none'}`}>
                         <div className='flex gap-3'>
-
                             <div>
                                 <h3 className='text-xl text-gray-300' > Price : $4.99 | Estimated Time : 45min</h3>
                                 <h5 className='text-lg text-gray-400 flex items-center gap-2' > <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="size-4">
